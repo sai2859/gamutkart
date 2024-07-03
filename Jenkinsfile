@@ -32,7 +32,7 @@ pipeline {
         }
 	stage('Deployment') {
 	   steps {
-		sh 'sshpass -p root scp target/gamutkart.war root@172.31.33.186:/root/apache-tomcat-8.5.100/webapps'
+		sh 'scp target/gamutkart.war root@172.31.33.186:/root/apache-tomcat-8.5.100/webapps'
 	}
     }
 }
